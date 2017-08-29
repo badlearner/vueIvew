@@ -33,19 +33,21 @@
     <div class="index">
         <Row type="flex" justify="center" align="middle">
             <Col span="24">
-                <h1>
-                    <img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
-                </h1>
                 <h2>
                     <p>Welcome to your iView app!</p>
                     <Button type="ghost" @click="handleStart">Start iView</Button>
                 </h2>
             </Col>
         </Row>
+        <footers></footers>
     </div>
 </template>
 <script>
+    import footer from "./baseCommponent/footer.vue";
     export default {
+        components:{
+            footers:footer
+        },
         methods: {
             handleStart() {
                 this.$Modal.info({
