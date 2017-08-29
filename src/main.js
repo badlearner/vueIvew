@@ -6,11 +6,14 @@ import Vuex from 'vuex';
 import Util from './libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
+import './css/index.css';
+import './libs/weui/css/weui.min.css';
 
 import VueI18n from 'vue-i18n';
 import Locales from './locale';
 import zhLocale from 'iview/src/locale/lang/zh-CN';
 import enLocale from 'iview/src/locale/lang/en-US';
+import './util/util';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);

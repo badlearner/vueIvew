@@ -1,52 +1,66 @@
 <style scoped>
-    .index {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-    }
-
-    .index h1 {
-        height: 150px;
-    }
-
-    .index h1 img {
-        height: 100%;
-    }
-
-    .index h2 {
-        color: #666;
-        margin-bottom: 200px;
-    }
-
-    .index h2 p {
-        margin: 0 0 50px;
-    }
-
+    .index{width:100%;height:100%;}
     .index .ivu-row-flex {
         height: 100%;
+    }
+    .pic-carousel{
+        height:6rem;
+    }
+    .pic-carousel .demo-carousel{
+        height:6rem;
+    }
+    .pic-carousel .demo-carousel img{
+        height:6rem;
+        width:100%;
     }
 </style>
 <template>
     <div class="index">
-        <Row type="flex" justify="center" align="middle">
-            <Col span="24">
-                <h2>
-                    <p>Welcome to your iView app!</p>
-                    <Button type="ghost" @click="handleStart">Start iView</Button>
-                </h2>
-            </Col>
-        </Row>
+        <header></header>
+        <div class="pic-carousel">
+            <Carousel
+                    v-model="value3"
+                    :autoplay="setting.autoplay"
+                    :autoplay-speed="setting.autoplaySpeed"
+                    :dots="setting.dots"
+                    :trigger="setting.trigger"
+                    :arrow="setting.arrow">
+                <CarouselItem>
+                    <div class="demo-carousel"><img src="../images/swiper1.png" /></div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div class="demo-carousel"><img src="../images/hands.png" /></div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div class="demo-carousel"><img src="../images/hands.png" /></div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div class="demo-carousel"><img src="../images/swiper1.png" /></div>
+                </CarouselItem>
+            </Carousel>
+        </div>
         <footers></footers>
     </div>
 </template>
 <script>
+    import header from "./baseCommponent/header.vue";
     import footer from "./baseCommponent/footer.vue";
     export default {
+        data () {
+            return {
+                value3: 0,
+                setting: {
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: 'inside',
+                    trigger: 'click',
+                    arrow: 'never'
+                }
+            }
+        },
         components:{
-            footers:footer
+            footers:footer,
+            header:header
         },
         methods: {
             handleStart() {

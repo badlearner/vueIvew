@@ -1,31 +1,16 @@
 <template>
-    <div class="footer">
-        <Menu mode="horizontal" theme="dark" active-name="1">
-            <div class="layout-nav">
-                <MenuItem name="1">
-                    首页
-                </MenuItem>
-                <MenuItem name="2">
-                    调理师
-                </MenuItem>
-                <MenuItem name="3">
-                    咨询专家
-                </MenuItem>
-                <MenuItem name="4">
-                    预约到店
-                </MenuItem>
-            </div>
-        </Menu>
+    <div class="weui-tabbar footer_link">
+        <a href="./index.html" class="weui-tabbar__item weui-bar__item_on">
+            <p class="weui-tabbar__label">首页</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+            <p class="weui-tabbar__label">调理师</p>
+        </a>
+        <a href="./expert_list.html" class="weui-tabbar__item">
+            <p class="weui-tabbar__label">咨询专家</p>
+        </a>
+        <a href="./store_list.html" class="weui-tabbar__item">
+            <p class="weui-tabbar__label">预约到店</p>
+        </a>
     </div>
 </template>
-<style>
-    .footer{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 999;
-    }
-    .footer .ivu-menu-dark{
-        background:#fff;
-    }
-</style>
