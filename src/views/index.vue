@@ -4,19 +4,19 @@
         height: 100%;
     }
     .pic-carousel{
-        height:6rem;
+        padding-top: 2.15rem;
     }
     .pic-carousel .demo-carousel{
-        height:6rem;
+        height:8rem;
     }
     .pic-carousel .demo-carousel img{
-        height:6rem;
+        height:8rem;
         width:100%;
     }
 </style>
 <template>
     <div class="index">
-        <header></header>
+        <headers></headers>
         <div class="pic-carousel">
             <Carousel
                     v-model="value3"
@@ -39,11 +39,103 @@
                 </CarouselItem>
             </Carousel>
         </div>
+        <div class="page_flex">
+            <div class="page_bd page_bd_spacing">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-1"></i></p>
+                                <p>母乳喂养</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-2"></i></p>
+                                <p>胸部护理</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-3"></i></p>
+                                <p>体型管理</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-4"></i></p>
+                                <p>体质调理</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page_bd page_bd_spacing">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-5"></i></p>
+                                <p>预期调理</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-6"></i></p>
+                                <p>私密养护</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-7"></i></p>
+                                <p>面部护理</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="#">
+                                <p><i class="index-icon index-icon-8"></i></p>
+                                <p>小儿推拿</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page_bd page_bd_spacing">
+                <div class="weui-flex index-image">
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="../center/DNA_center.html" class="images_1">
+                                <p>基因监测</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">
+                            <a href="../center/nanny_center.html" class="images_2">
+                                <p>月嫂中心</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footers></footers>
     </div>
 </template>
 <script>
-    import header from "./baseCommponent/header.vue";
+    import headers from "./baseCommponent/header.vue";
     import footer from "./baseCommponent/footer.vue";
     export default {
         data () {
@@ -51,7 +143,7 @@
                 value3: 0,
                 setting: {
                     autoplay: true,
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 3000,
                     dots: 'inside',
                     trigger: 'click',
                     arrow: 'never'
@@ -60,7 +152,7 @@
         },
         components:{
             footers:footer,
-            header:header
+            headers:headers
         },
         methods: {
             handleStart() {

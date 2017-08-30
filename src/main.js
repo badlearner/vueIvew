@@ -14,7 +14,17 @@ import Locales from './locale';
 import zhLocale from 'iview/src/locale/lang/zh-CN';
 import enLocale from 'iview/src/locale/lang/en-US';
 import './util/util';
+// 引入vue-amap
+import VueAMap from 'vue-amap';
+Vue.use(VueAMap);
 
+// 初始化vue-amap
+VueAMap.initAMapApiLoader({
+    // 高德的key
+    key: '7bd6d303a5d036f140952b1a9c685a46',
+    // 插件集合
+    plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor']
+});
 Vue.use(VueRouter);
 Vue.use(Vuex);
 Vue.use(VueI18n);

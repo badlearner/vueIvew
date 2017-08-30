@@ -11,7 +11,7 @@ html, body {height:100%;width:100%;background-color:#F5F5F5;}
 .mar-header .img{width:100%;height:9rem;}
 .footer_link .weui-tabbar__label{font-size: 0.7rem;font-weight: 700;}
 .mar-header .swiper-pagination-bullet-active{background-color: #D7E52F;}
-.page_flex{margin:0.2rem 0.3rem;}
+.page_flex{margin:0.6rem 0.3rem;}
 .page_flex .page_bd{margin:0.45rem auto;}
 .placeholder a{color:#0d0d0d;}
 .placeholder p{text-align:center;font-size: 0.6rem;}
